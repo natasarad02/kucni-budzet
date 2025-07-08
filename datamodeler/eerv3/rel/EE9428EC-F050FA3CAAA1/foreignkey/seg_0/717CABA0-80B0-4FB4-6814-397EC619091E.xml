@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="717CABA0-80B0-4FB4-6814-397EC619091E" containerWithKeyObject="CFF5662E-1235-7ACC-5431-655EB8A5F453" localFKIndex="AA4F9799-07E3-CC08-B088-1DDF39B1A1BC" name="Evidencija_Beleska_FK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>774BE0FC-8DB6-3043-3F5E-8A3A00B396D2</importedID>
+<referredTableLongName>Beleska</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>97EF7CC5-FDA3-9AF1-BA63-EA79B7042C2E</referredTableID>
+<keyObject>9EABC404-5429-AA8D-1540-01E11EB44E1C</keyObject>
+<referredKeyID>9EABC404-5429-AA8D-1540-01E11EB44E1C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IDB</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D04FE7D2-6898-CB55-300B-8AC924F68176" name="Kurs">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>AC612B44-C6A7-63D7-BA42-F758FD7C147C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDK" id="F2EFC266-B0BB-B7D0-F76D-0D369852170D">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>7BA9A086-53B7-9775-B3C7-57F09C2B0D38</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OSV" id="00631A00-5490-EA32-5135-0D42DCC71F35">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>65191500-123B-0633-EC2C-D853FC4CAA78</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A0B4A780-FD52-74C1-1D1D-6F28CC375400</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VRED" id="38A8F3AB-CD33-8ADC-89F7-1C72731BA08B">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>A3D17C31-0704-96A7-EA42-D6874652697D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATK" id="7DC3B125-BCDE-0BF8-5F60-63A69E3891B3">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>B6A14498-5D15-518E-EA21-306E21510682</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>0C9B0473-DF67-61D6-EDF2-C98750A9CD05</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Valuta_IDVAL2" id="90716E16-0776-CD67-104C-B8C73DB290D5">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>B13481F7-24FC-BCB8-861B-0BCC459B4E7E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5264F3A5-A829-A928-FC67-2FC1DE0B07F3" referredColumn="02F75D8F-2A3C-215B-F9B4-70AD157D269B"/>
+</associations>
+</Column>
+<Column name="Valuta_IDVAL" id="8EA19091-8433-D386-9E6D-2A25112B63BB">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>591144EA-8FEE-48A1-7E61-CDB6F3C8EC43</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A3A9C4B-1D10-5E85-4FC7-090B41DECBD0" referredColumn="02F75D8F-2A3C-215B-F9B4-70AD157D269B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B56E469D-1697-8995-D37E-894147331568" name="Kurs_PK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>D421334D-E439-614D-A316-C0EBB5A98AEF</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2EFC266-B0BB-B7D0-F76D-0D369852170D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F168C9F6-FE9A-565D-0DAF-A30344604F38" name="Kurs_Valuta_FK">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EA19091-8433-D386-9E6D-2A25112B63BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7220D9BA-EBCA-E72F-5CDE-B95C2E8CD8CA" name="Kurs_Valuta_FKv2">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90716E16-0776-CD67-104C-B8C73DB290D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

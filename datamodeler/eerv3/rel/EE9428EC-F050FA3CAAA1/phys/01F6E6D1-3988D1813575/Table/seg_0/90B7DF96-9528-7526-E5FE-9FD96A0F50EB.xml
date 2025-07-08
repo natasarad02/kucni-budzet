@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Valuta" directorySegmentName="seg_0" id="90B7DF96-9528-7526-E5FE-9FD96A0F50EB">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="IDVAL" id="02F75D8F-2A3C-215B-F9B4-70AD157D269B">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DRZ" id="7BB1526E-1F8C-065A-289D-F1BB7E97CD24">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="KOD" id="96B9434D-F54B-BDD1-9FDC-CA69752E9FB9">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAZVAL" id="C52200C3-DF7C-051D-5D5C-66126E13908B">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Valuta_PK" id="09605D7D-47CD-D383-9A9F-EB020B20B635">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

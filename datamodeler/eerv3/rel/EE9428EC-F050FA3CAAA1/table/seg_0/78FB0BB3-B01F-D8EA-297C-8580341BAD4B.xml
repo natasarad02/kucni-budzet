@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="78FB0BB3-B01F-D8EA-297C-8580341BAD4B" name="Budzetski_plan">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>375CFC81-AA8C-A783-F8BF-7A3858DE0EA6</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDPL" id="9C84C1C3-B3C3-4823-FA3E-A86DDEC5D534">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>66265C1A-5475-8B2A-545F-3CBCD08894FD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZPL" id="290D27A2-EEC3-6019-A72E-4C4235EF5660">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>B0CC0095-5F28-30E8-D10B-95D95AC4B90F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B2AA52C7-6D8E-27C3-0F50-D22663E3A597</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BUDZ" id="A14CFF6F-159C-7522-AB5D-914A336C10C2">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>F0E0F94F-DEE5-01EB-66B5-FF2657AB993B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATPOC" id="926BADBC-0111-2D8B-0543-A44EA63F3F4F">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>9645095E-609B-7571-DF37-CD32BE32EC39</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>0C9B0473-DF67-61D6-EDF2-C98750A9CD05</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATKRAJ" id="8CC57AD0-4900-4C4B-65C6-7B7230B294F4">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>1F4E5EA3-9948-B5AC-D855-7B066353F085</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>0C9B0473-DF67-61D6-EDF2-C98750A9CD05</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="129CE9B0-79A4-C027-DC0D-E20F8900515A" name="Budzetski_plan_PK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>623F5D31-0929-E344-2D19-8C195FB45780</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C84C1C3-B3C3-4823-FA3E-A86DDEC5D534"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

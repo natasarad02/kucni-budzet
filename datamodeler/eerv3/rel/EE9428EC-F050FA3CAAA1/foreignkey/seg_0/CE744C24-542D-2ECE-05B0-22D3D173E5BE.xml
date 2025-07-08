@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CE744C24-542D-2ECE-05B0-22D3D173E5BE" containerWithKeyObject="8E9F441C-91DF-246C-201F-27E517DC60DA" localFKIndex="AF7A8B76-1E47-613C-311C-55579102C91A" name="Pon_trans_Podsetnik_FK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>CA5EEC07-4FB2-541C-AB1E-2C7648EC9F6E</importedID>
+<referredTableLongName>Podsetnik</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EF3BDDEE-903B-66E6-26A8-E589D9305D95</referredTableID>
+<keyObject>F8C54B7C-9FA6-29CA-8CED-41BD6839C90E</keyObject>
+<referredKeyID>F8C54B7C-9FA6-29CA-8CED-41BD6839C90E</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>IDPOD</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

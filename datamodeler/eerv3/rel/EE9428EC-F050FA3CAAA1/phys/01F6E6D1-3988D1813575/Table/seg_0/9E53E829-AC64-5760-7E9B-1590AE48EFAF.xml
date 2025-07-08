@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Racun" directorySegmentName="seg_0" id="9E53E829-AC64-5760-7E9B-1590AE48EFAF">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Tip_racuna_IDTIP" id="04DF2879-2D86-3F28-1924-4E9988D1FBC7">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IDRAC" id="07CD8F1E-DC9F-4DC5-92C5-3DF29D1DC315">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAZRAC" id="10CEA5D4-CF0E-6E67-34CC-89363D61778F">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUSRAC" id="3A597806-DEB4-7FEE-FB00-0A92138841B6">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Valuta_IDVAL" id="5EFBCFD2-7A76-EE97-0893-1C41E9217622">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATZATV" id="A394F1BB-7536-B329-EBED-D2154BCA973B">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STANJE" id="B65CE8DF-2EB6-C93F-53D5-77CD32D4E4A6">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATOTV" id="CB387942-47EA-08C7-E414-37A4575EC02B">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Racun_Valuta_FK" id="097647D1-50E4-3CB4-1A97-F61CCFAA9918">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Racun_Tip_racuna_FK" id="2B045FBE-4FCB-FB71-36B7-77423F1EC2B6">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Racun_PK" id="C20E3E89-D56A-936F-C9DB-C53C45E9C78C">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

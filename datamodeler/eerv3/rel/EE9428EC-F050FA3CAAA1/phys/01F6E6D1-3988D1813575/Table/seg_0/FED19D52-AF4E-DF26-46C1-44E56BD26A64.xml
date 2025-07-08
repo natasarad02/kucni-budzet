@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Transakcija" directorySegmentName="seg_0" id="FED19D52-AF4E-DF26-46C1-44E56BD26A64">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Racun_IDRAC" id="78EB34FF-45E4-95A2-11CC-3558446BB0EE">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IDTR" id="84818F64-743A-9FA3-1802-A9AE2A0DA59D">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OPISTR" id="8B09D02F-478B-C29A-6E54-9CFD946FC5CE">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Kategorija_IDKAT" id="8C6C7D85-0F6F-63B5-ACFD-87F5001FE27C">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Racun_Valuta_IDVAL" id="A2E5F0EA-DE34-CD33-CFD8-BD17D2B8375F">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TIPTR" id="A65D95F8-08B1-C32D-E265-26743E241DC6">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IZNTR" id="ABE686F6-4BD1-54E0-73F2-848F0EC0331A">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATTR" id="B6CB78FF-3697-E7AF-7A65-3670650FD52A">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IZNOV" id="C27C3612-BB20-5FD3-D5FF-507A0F6A5940">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Racun_Tip_racuna_IDTIP" id="E7DFF30B-56F0-E732-9031-78DDB549F1FD">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Transakcija_Racun_FK" id="4D369B17-9CA8-048A-BBA6-89558B562F9A">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Transakcija_Kategorija_FK" id="CACEAF62-21B8-7983-A349-0772F47E9E89">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Transakcija_PK" id="D8E2972B-1D7A-3139-F13A-C75B39EA8548">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

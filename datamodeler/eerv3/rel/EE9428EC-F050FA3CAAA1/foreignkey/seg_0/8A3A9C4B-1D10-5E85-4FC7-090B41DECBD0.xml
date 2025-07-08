@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8A3A9C4B-1D10-5E85-4FC7-090B41DECBD0" containerWithKeyObject="D04FE7D2-6898-CB55-300B-8AC924F68176" localFKIndex="F168C9F6-FE9A-565D-0DAF-A30344604F38" name="Kurs_Valuta_FK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>5C0108F7-8B2A-EBB6-EA3B-5B5978695825</importedID>
+<referredTableLongName>Valuta</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>90B7DF96-9528-7526-E5FE-9FD96A0F50EB</referredTableID>
+<keyObject>09605D7D-47CD-D383-9A9F-EB020B20B635</keyObject>
+<referredKeyID>09605D7D-47CD-D383-9A9F-EB020B20B635</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IDVAL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

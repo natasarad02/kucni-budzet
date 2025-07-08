@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="eerv3" id="947FD3D7-B0DB-9A7F-2F0F-C89AF314A10A" version="3.5">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:11:27 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>947FD3D7-B0DB-9A7F-2F0F-C89AF314A10A</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="CB9EBFAA-0263-627F-3A6C-BE42CA5A8ACD">
+<designStoragePath>C:\noviddl</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="17FCB3AA-11FB-3C77-F4A7-F359996812D1" name="Kategorija">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>63878327-297C-AD55-764D-EFD6D7D535A2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDKAT" id="494FDB8B-9254-3EFC-E749-55BE01817470">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>6E2861CA-B2C6-A20B-0F16-7D8D4D3DDCE6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZKAT" id="195F75C9-0C91-0AEE-C9D9-6A0AD9C66E84">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>0399A52F-A26F-122B-2A64-CE5E58973175</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B2AA52C7-6D8E-27C3-0F50-D22663E3A597</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPKAT" id="2BA90F48-0AAB-E2B6-D906-98B3A82E74DC">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>D19AE91E-4F46-EFB8-26EE-511BED305102</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B2AA52C7-6D8E-27C3-0F50-D22663E3A597</domain>
+<listOfValues>
+<valueDef value="prihod" description=""/>
+<valueDef value="rashod" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kategorija_IDKAT" id="99F61BDA-AD55-F8EB-B038-A0960B608FCC">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>5EC85ADC-90A5-9DD3-4DB1-9C12BC5D48A2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3F17DA9E-5D91-8BC4-A515-71F171953AE3" referredColumn="494FDB8B-9254-3EFC-E749-55BE01817470"/>
+</associations>
+</Column>
+<Column name="Budzetski_plan_IDPL" id="5DA7CB6F-C5A9-C3EE-313B-E9B73F734134">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>9CC8CB19-248F-C015-3F75-5AB383238895</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9842606B-1AE9-E21C-39C5-852A07FEC6C7" referredColumn="9C84C1C3-B3C3-4823-FA3E-A86DDEC5D534"/>
+</associations>
+</Column>
+<Column name="Stednja_IDST" id="400C25B1-0233-4E96-3D41-C688182EB9DD">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>F1BCFBE5-3687-3F24-CC03-9DB0D551325A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8233ACDA-9BF4-5752-1CCC-59D0F3C5D7E4" referredColumn="08462BD7-E00B-F2A4-28FB-2E74315BC3C2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9B8D550E-697D-6217-6E33-A39C51336CB5" name="Kategorija_PK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>25132879-8F97-82E3-D83F-7DC11B507DE7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="494FDB8B-9254-3EFC-E749-55BE01817470"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D3ED9D7-60A4-6493-863F-5DCD638FC7DC" name="Kategorija_Budzetski_plan_FK">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DA7CB6F-C5A9-C3EE-313B-E9B73F734134"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5FD602C9-ADB4-2BD2-A7BA-339F355442FE" name="Kategorija_Kategorija_FK">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99F61BDA-AD55-F8EB-B038-A0960B608FCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E5E3B6D-6587-6AD0-B217-B2E889D36D2E" name="Kategorija_Stednja_FK">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="400C25B1-0233-4E96-3D41-C688182EB9DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="D09F3B4E-DBE8-F030-56AD-DD40399BE89C" mainViewID="AE3558C2-B00A-A6C5-3014-D90FA20F3470">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:11:27 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

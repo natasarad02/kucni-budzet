@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5509CB9E-47BD-6EAD-07A6-B0B5D76EE9A3" containerWithKeyObject="FED19D52-AF4E-DF26-46C1-44E56BD26A64" localFKIndex="CACEAF62-21B8-7983-A349-0772F47E9E89" name="Transakcija_Kategorija_FK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>AEF11A98-6C80-B32C-7616-A98A80A6BFA3</importedID>
+<referredTableLongName>Kategorija</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>17FCB3AA-11FB-3C77-F4A7-F359996812D1</referredTableID>
+<keyObject>9B8D550E-697D-6217-6E33-A39C51336CB5</keyObject>
+<referredKeyID>9B8D550E-697D-6217-6E33-A39C51336CB5</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>IDKAT</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

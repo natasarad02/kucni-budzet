@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="66911463-5917-6EF9-F870-C099DB473963" containerWithKeyObject="9E53E829-AC64-5760-7E9B-1590AE48EFAF" localFKIndex="097647D1-50E4-3CB4-1A97-F61CCFAA9918" name="Racun_Valuta_FK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>46CA925E-C193-CBB8-54A7-22B06C685DD6</importedID>
+<referredTableLongName>Valuta</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>90B7DF96-9528-7526-E5FE-9FD96A0F50EB</referredTableID>
+<keyObject>09605D7D-47CD-D383-9A9F-EB020B20B635</keyObject>
+<referredKeyID>09605D7D-47CD-D383-9A9F-EB020B20B635</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IDVAL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

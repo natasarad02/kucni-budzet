@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E6264E9A-7C7E-D4CB-6440-F85FEB13F925" containerWithKeyObject="9E53E829-AC64-5760-7E9B-1590AE48EFAF" localFKIndex="2B045FBE-4FCB-FB71-36B7-77423F1EC2B6" name="Racun_Tip_racuna_FK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>FD191162-5219-A6DB-E011-ABA277D5D75E</importedID>
+<referredTableLongName>Tip_racuna</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F969CC42-0574-99C6-3938-3B02D4F35428</referredTableID>
+<keyObject>9666F8FF-FB70-E2C7-E570-4268FBEFE1F9</keyObject>
+<referredKeyID>9666F8FF-FB70-E2C7-E570-4268FBEFE1F9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IDTIP</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

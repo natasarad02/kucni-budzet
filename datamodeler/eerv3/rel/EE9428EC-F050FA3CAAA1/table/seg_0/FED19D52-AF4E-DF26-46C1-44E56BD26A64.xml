@@ -1,0 +1,194 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FED19D52-AF4E-DF26-46C1-44E56BD26A64" name="Transakcija">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>B4DF0413-041E-69EE-F436-27B6698BA84E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDTR" id="84818F64-743A-9FA3-1802-A9AE2A0DA59D">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>DF919DCC-685F-7DA6-2B56-D7F8BD648B6C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OPISTR" id="8B09D02F-478B-C29A-6E54-9CFD946FC5CE">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>2EC503A9-FB0F-24FA-CFBD-1AED0405CA93</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FFD4535B-970F-BF13-57B9-AE4C192555BE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IZNOV" id="C27C3612-BB20-5FD3-D5FF-507A0F6A5940">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>A28A48BD-A522-72B7-9E03-8D5C4D201760</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATTR" id="B6CB78FF-3697-E7AF-7A65-3670650FD52A">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>DCE64331-77F8-BBDC-7976-50C4CA03799B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>0C9B0473-DF67-61D6-EDF2-C98750A9CD05</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IZNTR" id="ABE686F6-4BD1-54E0-73F2-848F0EC0331A">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>C66B5165-2874-6832-8E9D-EA503EF1B8FF</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPTR" id="A65D95F8-08B1-C32D-E265-26743E241DC6">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>598B797F-40A6-7A6E-15EE-866A3043AB4A</importedID>
+<constraintName>CH_INH_Transakcija</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B2AA52C7-6D8E-27C3-0F50-D22663E3A597</domain>
+<listOfValues>
+<valueDef value="Dv_trans" description=""/>
+<valueDef value="Pon_trans" description=""/>
+<valueDef value="Transakcija" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Racun_IDRAC" id="78EB34FF-45E4-95A2-11CC-3558446BB0EE">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>DB4446B6-9FB1-15CB-918B-883F9CA1B257</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7D9A73B-3A74-F720-BA4A-B8937D5C8C60" referredColumn="07CD8F1E-DC9F-4DC5-92C5-3DF29D1DC315"/>
+</associations>
+</Column>
+<Column name="Racun_Tip_racuna_IDTIP" id="E7DFF30B-56F0-E732-9031-78DDB549F1FD">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>08700DA8-AB0F-10A8-56E6-63C25B965BB0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7D9A73B-3A74-F720-BA4A-B8937D5C8C60" referredColumn="04DF2879-2D86-3F28-1924-4E9988D1FBC7"/>
+</associations>
+</Column>
+<Column name="Racun_Valuta_IDVAL" id="A2E5F0EA-DE34-CD33-CFD8-BD17D2B8375F">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>E284946A-C95E-3BB8-734F-0FBB930F1A3A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7D9A73B-3A74-F720-BA4A-B8937D5C8C60" referredColumn="5EFBCFD2-7A76-EE97-0893-1C41E9217622"/>
+</associations>
+</Column>
+<Column name="Kategorija_IDKAT" id="8C6C7D85-0F6F-63B5-ACFD-87F5001FE27C">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>11672EC6-4FA1-C123-03DC-604126A729C0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AAEFBAF5-D644-AA56-C289-EBAED2621993</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5509CB9E-47BD-6EAD-07A6-B0B5D76EE9A3" referredColumn="494FDB8B-9254-3EFC-E749-55BE01817470"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D8E2972B-1D7A-3139-F13A-C75B39EA8548" name="Transakcija_PK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>3AB87FEF-AEC3-326F-68CF-83246D4A6978</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84818F64-743A-9FA3-1802-A9AE2A0DA59D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CACEAF62-21B8-7983-A349-0772F47E9E89" name="Transakcija_Kategorija_FK">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C6C7D85-0F6F-63B5-ACFD-87F5001FE27C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D369B17-9CA8-048A-BBA6-89558B562F9A" name="Transakcija_Racun_FK">
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78EB34FF-45E4-95A2-11CC-3558446BB0EE"/>
+<colUsage columnID="E7DFF30B-56F0-E732-9031-78DDB549F1FD"/>
+<colUsage columnID="A2E5F0EA-DE34-CD33-CFD8-BD17D2B8375F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

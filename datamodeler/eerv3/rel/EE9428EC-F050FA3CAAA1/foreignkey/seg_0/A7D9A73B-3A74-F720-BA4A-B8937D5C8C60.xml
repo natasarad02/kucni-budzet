@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A7D9A73B-3A74-F720-BA4A-B8937D5C8C60" containerWithKeyObject="FED19D52-AF4E-DF26-46C1-44E56BD26A64" localFKIndex="4D369B17-9CA8-048A-BBA6-89558B562F9A" name="Transakcija_Racun_FK">
+<sourceDDLFile>noviddl.sql</sourceDDLFile>
+<createdBy>Nata</createdBy>
+<createdTime>2025-07-08 08:22:39 UTC</createdTime>
+<ownerDesignName>eerv3</ownerDesignName>
+<importedID>892AD5E8-B7FD-EF98-0415-C4C8697EC09F</importedID>
+<referredTableLongName>Racun</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9E53E829-AC64-5760-7E9B-1590AE48EFAF</referredTableID>
+<keyObject>C20E3E89-D56A-936F-C9DB-C53C45E9C78C</keyObject>
+<referredKeyID>C20E3E89-D56A-936F-C9DB-C53C45E9C78C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IDRAC,Tip_racuna_IDTIP,Valuta_IDVAL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
