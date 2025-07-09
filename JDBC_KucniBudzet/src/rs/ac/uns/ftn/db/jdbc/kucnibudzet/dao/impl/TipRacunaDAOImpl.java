@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
-import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.ValutaDAO;
-import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Valuta;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TipRacunaDAO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.TipRacuna;
 
-public class ValutaDAOImpl implements ValutaDAO {
+public class TipRacunaDAOImpl implements TipRacunaDAO {
 
 	@Override
 	public int count() throws SQLException {
@@ -20,7 +20,7 @@ public class ValutaDAOImpl implements ValutaDAO {
 	}
 
 	@Override
-	public boolean delete(Valuta entity) throws SQLException {
+	public boolean delete(TipRacuna entity) throws SQLException {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -44,31 +44,31 @@ public class ValutaDAOImpl implements ValutaDAO {
 	}
 
 	@Override
-	public Iterable<Valuta> findAll() throws SQLException {
+	public Iterable<TipRacuna> findAll() throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Iterable<Valuta> findAllById(Iterable<Integer> ids) throws SQLException {
+	public Iterable<TipRacuna> findAllById(Iterable<Integer> ids) throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Valuta findById(Integer id) throws SQLException {
+	public TipRacuna findById(Integer id) throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean save(Valuta entity) throws SQLException {
+	public boolean save(TipRacuna entity) throws SQLException {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public int saveAll(Iterable<Valuta> entities) throws SQLException {
+	public int saveAll(Iterable<TipRacuna> entities) throws SQLException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
