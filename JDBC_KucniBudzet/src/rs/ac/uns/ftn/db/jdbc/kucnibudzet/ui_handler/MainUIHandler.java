@@ -7,7 +7,7 @@ public class MainUIHandler {
 	public static Scanner sc = new Scanner(System.in);
 
 	
-	private final SceneUIHandler sceneUIHandler = new SceneUIHandler();
+	
 	private final ComplexQueryUIHandler complexQueryUIHandler = new ComplexQueryUIHandler();
 
 	public void handleMainMenu() {

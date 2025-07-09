@@ -4,7 +4,7 @@ public class TipRacuna {
 	private int id;
 	private String naziv;
 	private String opis;
-	private double min_iznos;
+	private double minIznos;
 	private double limit;
 	
 	public TipRacuna() {
@@ -36,12 +36,12 @@ public class TipRacuna {
 		this.opis = opis;
 	}
 
-	public double getMin_iznos() {
-		return min_iznos;
+	public double getMinIznos() {
+		return minIznos;
 	}
 
-	public void setMin_iznos(double min_iznos) {
-		this.min_iznos = min_iznos;
+	public void setMinIznos(double min_iznos) {
+		this.minIznos = min_iznos;
 	}
 
 	public double getLimit() {
