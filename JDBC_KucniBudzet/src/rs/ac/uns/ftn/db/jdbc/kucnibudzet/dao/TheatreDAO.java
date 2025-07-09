@@ -1,0 +1,6 @@
+package rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao;
+
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Theatre;
+
+public interface TheatreDAO extends CRUDDao<Theatre, Integer> {
+}
