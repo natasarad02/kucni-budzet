@@ -3,7 +3,7 @@ package rs.ac.uns.ftn.db.jdbc.kucnibudzet.main;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.ui_handler.MainUIHandler;
 
-public class ApplicationTheatre {
+public class ApplicationKucniBudzet {
 
 	public static void main(String[] args) {
 
