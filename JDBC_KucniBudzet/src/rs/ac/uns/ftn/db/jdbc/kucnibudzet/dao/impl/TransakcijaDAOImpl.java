@@ -8,10 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
-import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.PlayDAO;
-import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Play;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TransakcijaDAO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Transakcija;
 
-public class PlayDAOImpl implements PlayDAO {
+
+public class TransakcijaDAOImpl implements TransakcijaDAO {
 
 	@Override
 	public int count() throws SQLException {
@@ -20,7 +21,7 @@ public class PlayDAOImpl implements PlayDAO {
 	}
 
 	@Override
-	public boolean delete(Play entity) throws SQLException {
+	public boolean delete(Transakcija entity) throws SQLException {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -44,50 +45,36 @@ public class PlayDAOImpl implements PlayDAO {
 	}
 
 	@Override
-	public Iterable<Play> findAll() throws SQLException {
+	public Iterable<Transakcija> findAll() throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Iterable<Play> findAllById(Iterable<Integer> ids) throws SQLException {
+	public Iterable<Transakcija> findAllById(Iterable<Integer> ids) throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Play findById(Integer id) throws SQLException {
-		String query = "select id_pl, name_pl, duration_pl,year_pl from play where id_pl = ?";
-		Play play = null;
-
-		try (Connection connection = ConnectionUtil_HikariCP.getConnection();
-				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
-
-			preparedStatement.setInt(1, id);
-
-			try (ResultSet resultSet = preparedStatement.executeQuery()) {
-				if (resultSet.isBeforeFirst()) {
-					resultSet.next();
-					play = new Play(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getInt(4));
-				}
-			}
-		}
-
-		return play;
-
+	public Transakcija findById(Integer id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public boolean save(Play entity) throws SQLException {
+	public boolean save(Transakcija entity) throws SQLException {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public int saveAll(Iterable<Play> entities) throws SQLException {
+	public int saveAll(Iterable<Transakcija> entities) throws SQLException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 	
 }
