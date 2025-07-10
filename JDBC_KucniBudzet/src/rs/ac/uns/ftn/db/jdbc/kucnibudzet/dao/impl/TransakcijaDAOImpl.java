@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
+//import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TransakcijaDAO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.jednostavanupit.TransakcijaKategorijaDTO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Transakcija;
 
 
@@ -72,6 +74,32 @@ public class TransakcijaDAOImpl implements TransakcijaDAO {
 	public int saveAll(Iterable<Transakcija> entities) throws SQLException {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<TransakcijaKategorijaDTO> izracunajSumuPoKategoriji() throws SQLException {
+		// TODO Auto-generated method stub
+		
+		List<TransakcijaKategorijaDTO> rezultat = new ArrayList<>();
+		
+		 String query = "SELECT k.NAZKAT, SUM(t.IZNOV) AS ukupno " +
+                 "FROM Transakcija t " +
+                 "JOIN Kategorija k ON t.Kategorija_IDKAT = k.IDKAT " +
+                 "GROUP BY k.NAZKAT";
+		 
+		 try(Connection connection = ConnectionUtil_HikariCP.getConnection();
+				 PreparedStatement preparedStatement = connection.prepareStatement(query);
+				 ResultSet resultSet = preparedStatement.executeQuery())
+		 {
+			 while(resultSet.next())
+			 {
+				 String naziv = resultSet.getString("NAZKAT");
+		         Double ukupno = resultSet.getDouble("ukupno");
+
+		         rezultat.add(new TransakcijaKategorijaDTO(naziv, ukupno));
+			 }
+		 }
+		return rezultat;
 	}
 
 	
