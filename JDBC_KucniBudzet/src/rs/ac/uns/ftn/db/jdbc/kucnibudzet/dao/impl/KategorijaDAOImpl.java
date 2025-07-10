@@ -87,7 +87,7 @@ public class KategorijaDAOImpl implements KategorijaDAO {
 			 {
 				 if(resultSet.next())
 				 {
-					 return new Kategorija(resultSet.getInt("IDKAT"), resultSet.getString("NAZKAT"), resultSet.getString("TIPKAT"));
+					 return new Kategorija(resultSet.getInt("IDKAT"), resultSet.getString("NAZKAT"), resultSet.getString("TIPKAT"), -1, -1, -1);
 				 }
 			 }
 		 }
