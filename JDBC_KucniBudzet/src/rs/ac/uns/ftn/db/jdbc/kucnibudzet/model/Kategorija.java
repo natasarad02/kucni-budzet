@@ -5,9 +5,7 @@ public class Kategorija {
 	private int id;
 	private String naziv;
 	private String tipKat;
-	private int idKat; // ukoliko je potkategorija
-	private int idPlana;
-	private int idStednje;
+
 	
 	
 	public Kategorija() {
@@ -16,14 +14,12 @@ public class Kategorija {
 	}
 	
 	
-	public Kategorija(int id, String naziv, String tipKat, int idKat, int idPlana, int idStednje) {
+	public Kategorija(int id, String naziv, String tipKat) {
 		super();
 		this.id = id;
 		this.naziv = naziv;
 		this.tipKat = tipKat;
-		this.idKat = idKat;
-		this.idPlana = idPlana;
-		this.idStednje = idStednje;
+	
 	}
 
 
@@ -45,25 +41,7 @@ public class Kategorija {
 	public void setTipKat(String tipKat) {
 		this.tipKat = tipKat;
 	}
-	public int getIdKat() {
-		return idKat;
-	}
-	public void setIdKat(int idKat) {
-		this.idKat = idKat;
-	}
-	public int getIdPlana() {
-		return idPlana;
-	}
-	public void setIdPlana(int idPlana) {
-		this.idPlana = idPlana;
-	}
-	public int getIdStednje() {
-		return idStednje;
-	}
-	public void setIdStednje(int idStednje) {
-		this.idStednje = idStednje;
-	}
-	
+
 	
 
 }

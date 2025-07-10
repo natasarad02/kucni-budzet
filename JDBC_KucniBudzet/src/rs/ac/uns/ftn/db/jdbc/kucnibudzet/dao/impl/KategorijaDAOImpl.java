@@ -74,6 +74,44 @@ public class KategorijaDAOImpl implements KategorijaDAO {
 		return 0;
 	}
 
+	@Override
+	public Kategorija getKategorijaByNaziv(String naziv) throws SQLException {
+		// TODO Auto-generated method stub
+		String query = "SELECT IDKAT, NAZKAT, TIPKAT FROM Kategorija WHERE NAZKAT = ?";
+		
+		 try(Connection connection = ConnectionUtil_HikariCP.getConnection();
+				 PreparedStatement preparedStatement = connection.prepareStatement(query);)
+		 {
+			 preparedStatement.setString(1, naziv);
+			 try(ResultSet resultSet = preparedStatement.executeQuery())
+			 {
+				 if(resultSet.next())
+				 {
+					 return new Kategorija(resultSet.getInt("IDKAT"), resultSet.getString("NAZKAT"), resultSet.getString("TIPKAT"));
+				 }
+			 }
+		 }
+		return null;
+	}
+
+	@Override
+	public int insertKategorija(Kategorija kat) throws SQLException {
+		// TODO Auto-generated method stub
+		String query = "INSERT INTO Kategorija (IDKAT, NAZKAT, TIPKAT) VALUES (KAT_SEQ.NEXTVAL, ?, ?)";
+		
+		 try(Connection connection = ConnectionUtil_HikariCP.getConnection();
+				 PreparedStatement preparedStatement = connection.prepareStatement(query);)
+		 {
+			 preparedStatement.setString(1, kat.getNaziv());
+			 preparedStatement.setString(2, kat.getTipKat());
+			
+			 int rowsAffected = preparedStatement.executeUpdate();
+			 return rowsAffected;
+			 
+			 
+		 }
+	}
+
 	
 
 }
