@@ -75,19 +75,19 @@ public class KategorijaDAOImpl implements KategorijaDAO {
 	}
 
 	@Override
-	public Kategorija getKategorijaByNaziv(String naziv) throws SQLException {
+	public Kategorija getKategorijaById(int id) throws SQLException {
 		// TODO Auto-generated method stub
-		String query = "SELECT IDKAT, NAZKAT, TIPKAT FROM Kategorija WHERE NAZKAT = ?";
+		String query = "SELECT IDKAT, NAZKAT, TIPKAT, KATEGORIJA_IDKAT, BUDZETSKI_PLAN_IDPL, STEDNJA_IDST FROM Kategorija WHERE IDKAT = ?";
 		
 		 try(Connection connection = ConnectionUtil_HikariCP.getConnection();
 				 PreparedStatement preparedStatement = connection.prepareStatement(query);)
 		 {
-			 preparedStatement.setString(1, naziv);
+			 preparedStatement.setInt(1, id);
 			 try(ResultSet resultSet = preparedStatement.executeQuery())
 			 {
 				 if(resultSet.next())
 				 {
-					 return new Kategorija(resultSet.getInt("IDKAT"), resultSet.getString("NAZKAT"), resultSet.getString("TIPKAT"), -1, -1, -1);
+					 return new Kategorija(resultSet.getInt("IDKAT"), resultSet.getString("NAZKAT"), resultSet.getString("TIPKAT"), resultSet.getInt("KATEGORIJA_IDKAT"), resultSet.getInt("BUDZETSKI_PLAN_IDPL"), resultSet.getInt("STEDNJA_IDST"));
 				 }
 			 }
 		 }
@@ -97,18 +97,31 @@ public class KategorijaDAOImpl implements KategorijaDAO {
 	@Override
 	public int insertKategorija(Kategorija kat) throws SQLException {
 		// TODO Auto-generated method stub
-		String query = "INSERT INTO Kategorija (IDKAT, NAZKAT, TIPKAT) VALUES (KAT_SEQ.NEXTVAL, ?, ?)";
+		 String getNextIdQuery = "SELECT COALESCE(MAX(IDKAT), 0) + 1 AS NEXT_ID FROM Kategorija";
+		 String insertQuery = "INSERT INTO Kategorija (IDKAT, NAZKAT, TIPKAT, KATEGORIJA_IDKAT, BUDZETSKI_PLAN_IDPL, STEDNJA_IDST) VALUES (?, ?, ?, ?, ?, ?)";
 		
-		 try(Connection connection = ConnectionUtil_HikariCP.getConnection();
-				 PreparedStatement preparedStatement = connection.prepareStatement(query);)
-		 {
-			 preparedStatement.setString(1, kat.getNaziv());
-			 preparedStatement.setString(2, kat.getTipKat());
-			
-			 int rowsAffected = preparedStatement.executeUpdate();
-			 return rowsAffected;
+		 try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+		         PreparedStatement idStatement = connection.prepareStatement(getNextIdQuery);
+		         ResultSet rs = idStatement.executeQuery()) {
+
+		        int nextId = 1; // fallback
+		        if (rs.next()) {
+		            nextId = rs.getInt("NEXT_ID");
+		        }
+		        
+		        try(PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);)
+		        {
+		        	preparedStatement.setInt(1, nextId);
+		        	preparedStatement.setString(2, "dodati_naziv");
+		        	preparedStatement.setString(3, "prihod");
+		        	preparedStatement.setInt(4, 1);
+		        	preparedStatement.setNull(5, java.sql.Types.INTEGER);
+		        	preparedStatement.setNull(6, java.sql.Types.INTEGER);
+		        	preparedStatement.executeUpdate();
+		        	return nextId;
 			 
 			 
+		 }
 		 }
 	}
 

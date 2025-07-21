@@ -8,9 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.KategorijaDAO;
 //import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TransakcijaDAO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.jednostavanupit.TransakcijaKategorijaDTO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Kategorija;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Transakcija;
 
 
@@ -100,6 +102,66 @@ public class TransakcijaDAOImpl implements TransakcijaDAO {
 			 }
 		 }
 		return rezultat;
+	}
+
+	@Override
+	public void insertTransakcija(Transakcija tr) throws SQLException {
+	    String getMaxIdSql = "SELECT COALESCE(MAX(IDTR), 0) + 1 FROM Transakcija";
+	    String insertSql = "INSERT INTO Transakcija (IDTR, OPISTR, IZNOV, DATTR, IZNTR, TIPTR, Kategorija_IDKAT, Racun_IDRAC, Racun_Tip_racuna_IDTIP, Racun_Valuta_IDVAL) " +
+	                       "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+	    try (Connection conn = ConnectionUtil_HikariCP.getConnection();
+	         PreparedStatement getMaxIdStmt = conn.prepareStatement(getMaxIdSql);
+	         ResultSet rs = getMaxIdStmt.executeQuery()) {
+
+	        int nextId = 1;
+	        if (rs.next()) {
+	            nextId = rs.getInt(1);
+	        }
+
+	        try (PreparedStatement ps = conn.prepareStatement(insertSql)) {
+	            ps.setInt(1, nextId);
+	            ps.setString(2, tr.getOpis());
+	            ps.setDouble(3, tr.getIznosOsnovnaValuta());
+	            ps.setTimestamp(4, java.sql.Timestamp.valueOf(tr.getDatum()));
+	            ps.setDouble(5, tr.getIznosTransakcije());
+	            ps.setString(6, tr.getTip());
+	            ps.setInt(7, tr.getIdKategorije());
+	            ps.setInt(8, tr.getIdRacuna());
+	            ps.setInt(9, tr.getIdTipaRacuna());
+	            ps.setInt(10, tr.getIdValute());
+
+	            ps.executeUpdate();
+	        }
+	    }
+	}
+
+	@Override
+	public Kategorija getKategorijaZaTransakciju(int idTransakcije) throws SQLException {
+		String query = "SELECT k.IDKAT, k.NAZKAT, k.TIPKAT, k.KATEGORIJA_IDKAT, k.BUDZETSKI_PLAN_IDPL, k.STEDNJA_IDST " +
+                "FROM Kategorija k " +
+                "JOIN Transakcija t ON k.IDKAT = t.KATEGORIJA_IDKAT " +
+                "WHERE t.IDTR = ?";
+		
+		 try (Connection connection = ConnectionUtil_HikariCP.getConnection();
+		         PreparedStatement ps = connection.prepareStatement(query)) {
+
+		        ps.setInt(1, idTransakcije);
+
+		        try (ResultSet rs = ps.executeQuery()) {
+		            if (rs.next()) {
+		                return new Kategorija(
+		                    rs.getInt("IDKAT"),
+		                    rs.getString("NAZKAT"),
+		                    rs.getString("TIPKAT"),
+		                    rs.getInt("KATEGORIJA_IDKAT"),
+		                    rs.getInt("BUDZETSKI_PLAN_IDPL"),
+		                    rs.getInt("STEDNJA_IDST")
+		                );
+		            }
+		        }
+		    }
+		return null;
 	}
 
 	

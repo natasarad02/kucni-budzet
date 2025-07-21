@@ -9,6 +9,6 @@ import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Kategorija;
 public interface KategorijaDAO extends CRUDDao<Kategorija, Integer> {
 
 	
-	public Kategorija getKategorijaByNaziv(String naziv) throws SQLException;
+	public Kategorija getKategorijaById(int id) throws SQLException;
 	public int insertKategorija(Kategorija kat) throws SQLException;
 }
