@@ -164,6 +164,37 @@ public class TransakcijaDAOImpl implements TransakcijaDAO {
 		return null;
 	}
 
+	@Override
+	public List<Transakcija> getTransakcijeZaRacun(int idRac) throws SQLException {
+		// TODO Auto-generated method stub
+		 String sql = "SELECT * FROM TRANSAKCIJA WHERE RACUN_IDRAC = ?";
+		    List<Transakcija> rezultat = new ArrayList<>();
+		    try (Connection conn = ConnectionUtil_HikariCP.getConnection();
+		         PreparedStatement ps = conn.prepareStatement(sql)) {
+		        ps.setInt(1, idRac);
+		        try (ResultSet rs = ps.executeQuery()) {
+		            while (rs.next()) {
+		                Transakcija tr = new Transakcija(
+		                		rs.getInt("IDTR"),
+		                		rs.getString("OPISTR"),
+		                		rs.getDouble("IZNOV"),
+		                		rs.getDouble("IZNTR"),
+		                		rs.getTimestamp("DATTR").toLocalDateTime(),
+		                		rs.getString("TIPTR"),
+		                		rs.getInt("RACUN_IDRAC"),
+		                		rs.getInt("RACUN_TIP_RACUNA_IDTIP"),
+		                		rs.getInt("RACUN_VALUTA_IDVAL"),
+		                		rs.getInt("KATEGORIJA_IDKAT")
+		                		);
+		              
+		                // postavi druge ako treba
+		                rezultat.add(tr);
+		            }
+		        }
+		    }
+		    return rezultat;
+	}
+
 	
 
 	

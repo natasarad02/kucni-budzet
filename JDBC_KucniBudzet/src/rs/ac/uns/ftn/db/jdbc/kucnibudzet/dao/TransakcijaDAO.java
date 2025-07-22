@@ -15,4 +15,5 @@ public interface TransakcijaDAO extends CRUDDao<Transakcija, Integer> {
 	public List<TransakcijaKategorijaDTO> izracunajSumuPoKategoriji() throws SQLException;
 	public void insertTransakcija(Transakcija tr) throws SQLException;
 	public Kategorija getKategorijaZaTransakciju(int idTransakcije) throws SQLException;
+	public List<Transakcija> getTransakcijeZaRacun(int idRac) throws SQLException;
 }
