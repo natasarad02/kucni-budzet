@@ -83,26 +83,33 @@ public class RacunDAOImpl implements RacunDAO {
 		// TODO Auto-generated method stub
 		String sql = "SELECT * FROM RACUN";
 		List<Racun> rezultat = new ArrayList<>();
-		
+	
 		try(Connection conn = ConnectionUtil_HikariCP.getConnection();
 				PreparedStatement ps = conn.prepareStatement(sql);
 				ResultSet rs = ps.executeQuery())
 		{
+			
 			while(rs.next())
 			{
+				
 				Racun r = new Racun(
 						rs.getInt("IDRAC"),
 						rs.getString("NAZRAC"),
 						rs.getDouble("STANJE"),
-						rs.getTimestamp("DATOTV").toLocalDateTime(),
-						rs.getTimestamp("DATZATV").toLocalDateTime(),
+						rs.getTimestamp("DATOTV") != null ? rs.getTimestamp("DATOTV").toLocalDateTime() : null,
+					    rs.getTimestamp("DATZATV") != null ? rs.getTimestamp("DATZATV").toLocalDateTime() : null,
 						rs.getString("STATUSRAC"),
-						rs.getInt("TIP_RACUNA+IDTIP"),
+						rs.getInt("TIP_RACUNA_IDTIP"),
 						rs.getInt("VALUTA_IDVAL")
 						
 						);
+				
 				rezultat.add(r);
+				
+			
+				
 			}
+			
 		}
 		return rezultat;
 	}

@@ -24,6 +24,13 @@ public class TransakcijaService {
 		
 	}
 	
+	// metoda napravljena zbog debugginga
+	public List<Transakcija> getSveTransakcijeZaRacun101() throws SQLException
+	{
+		return transakcijaDAO.getTransakcijeZaRacun(101);
+		
+	}
+	
 	public void unesiTransakcijuSaKategorijom(Transakcija tr)
 	{
 		Connection conn = null;

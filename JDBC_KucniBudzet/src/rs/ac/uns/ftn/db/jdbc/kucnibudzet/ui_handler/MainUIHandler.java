@@ -5,28 +5,35 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Scanner;
 
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TransakcijaDAO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.jednostavanupit.TransakcijaKategorijaDTO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Racun;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Transakcija;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.service.ComplexFuncionalityService;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.service.RacunService;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.service.TransakcijaService;
 
 public class MainUIHandler {
 
 	public static Scanner sc = new Scanner(System.in);
 	private static final TransakcijaService transakcijaService = new TransakcijaService();
+	private static final RacunService racunService = new RacunService();
+	private static final ComplexFuncionalityService complexService = new ComplexFuncionalityService();
 	
 	
 	private final ComplexQueryUIHandler complexQueryUIHandler = new ComplexQueryUIHandler();
 
-	public void handleMainMenu() {
+	public void handleMainMenu() throws SQLException {
 
 		String answer;
 		do {
 			System.out.println("\nOdaberite opciju:");
 			System.out.println("1 - Jednostavan upit - izracunaj sumu iznosa transakcija po kategorijama");
-			System.out.println("2 - Rukovanje scenama");
-			System.out.println("3 - Kompleksni upiti");
+			System.out.println("2 - Kompleksan upit 1 - Prikaz ukupnog iznosa transakcije po tipu i racunu");
+			System.out.println("3 - Kompleksan upit 2");
 			System.out.println("4 - Dodavanje nove transakcije");
 			System.out.println("X - Izlazak iz programa");
 
@@ -38,6 +45,7 @@ public class MainUIHandler {
 				break;
 			case "2":
 				//sceneUIHandler.handleSceneMenu();
+				prikazPrvogKompleksnogUpita();
 				break;
 			case "3":
 				//complexQueryUIHandler.handleComplexQueryMenu();
@@ -50,6 +58,13 @@ public class MainUIHandler {
 		} while (!answer.equalsIgnoreCase("X"));
 
 		sc.close();
+	}
+
+	private void prikazPrvogKompleksnogUpita() throws SQLException {
+		// TODO Auto-generated method stub
+		complexService.prikaziUkupanIznosPoTipuTransakcije();
+		
+		
 	}
 
 	private void handleDodavanjeTransakcije() {
