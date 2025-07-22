@@ -2,6 +2,8 @@ package rs.ac.uns.ftn.db.jdbc.kucnibudzet.service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,6 +23,7 @@ public class ComplexFuncionalityService {
 	private static final TransakcijaDAO transakcijaDAO = new TransakcijaDAOImpl();
 	private static final KategorijaDAO kategorijaDAO = new KategorijaDAOImpl();
 	private static final RacunDAO racunDAO = new RacunDAOImpl();
+	
 	
 	public void prikaziUkupanIznosPoTipuTransakcije() throws SQLException{
 		List<StatistikaTransakcijaTipDTO> rezultat = new ArrayList<>();
@@ -50,7 +53,17 @@ public class ComplexFuncionalityService {
 			    }
 
 			   rezultat.add(new StatistikaTransakcijaTipDTO(racun.getId(), tip, suma, broj));
-		}
+			
+			   
+			   Collections.sort(rezultat, new Comparator<StatistikaTransakcijaTipDTO>() {
+				    @Override
+				    public int compare(StatistikaTransakcijaTipDTO o1, StatistikaTransakcijaTipDTO o2) {
+				        return Double.compare(o1.getUkupnaSuma(), o2.getUkupnaSuma()); // sortiranje po sumi opadajuće
+				    }
+				});
+
+
+			}
 	}
 		
 		for(StatistikaTransakcijaTipDTO dto : rezultat)
@@ -59,5 +72,7 @@ public class ComplexFuncionalityService {
 			            dto.getIdRacuna(), dto.getTipTransakcije(), dto.getUkupnaSuma(), dto.getBrojTransakcija());
 		}
 	}
+	
+	
 	
 }
