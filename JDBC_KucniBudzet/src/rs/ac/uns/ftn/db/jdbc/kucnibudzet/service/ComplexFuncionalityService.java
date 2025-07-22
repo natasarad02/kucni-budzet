@@ -13,7 +13,9 @@ import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TransakcijaDAO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.impl.KategorijaDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.impl.RacunDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.impl.TransakcijaDAOImpl;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksanupit1.StatistikaTransakcijaKategorijaDTO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksanupit1.StatistikaTransakcijaTipDTO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Kategorija;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Racun;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Transakcija;
 
@@ -24,6 +26,55 @@ public class ComplexFuncionalityService {
 	private static final KategorijaDAO kategorijaDAO = new KategorijaDAOImpl();
 	private static final RacunDAO racunDAO = new RacunDAOImpl();
 	
+	public void prikaziProsecanIznosPoKategoriji() throws SQLException{
+		
+		List<StatistikaTransakcijaKategorijaDTO> rezultat = new ArrayList<>();
+		List<Racun> racuni = racunDAO.getSviRacuni();
+		
+		List<Kategorija> kategorije = (List<Kategorija>) kategorijaDAO.findAll();
+		
+		for (Racun r : racuni) {
+		    for (Kategorija k : kategorije) {
+		    	
+		        List<Transakcija> transakcije = transakcijaDAO.getTransakcijeZaRacunIKategoriju(r.getId(), k.getId());
+		        
+		        double suma = 0;
+		        for (Transakcija t : transakcije) {
+		            suma += t.getIznosOsnovnaValuta();
+		        }
+
+		        Double prosek = transakcije.isEmpty() ? null : suma / transakcije.size();
+		        rezultat.add(new StatistikaTransakcijaKategorijaDTO(r.getId(), k.getNaziv(), prosek));
+		        
+		        
+		       
+		    }
+		   
+		}
+		 
+		 Collections.sort(rezultat, new Comparator<StatistikaTransakcijaKategorijaDTO>() {
+			    @Override
+			    public int compare(StatistikaTransakcijaKategorijaDTO o1, StatistikaTransakcijaKategorijaDTO o2) {
+			    	 double p1 = o1.getProsecniIznos() == null ? 0.0 : o1.getProsecniIznos();
+			         double p2 = o2.getProsecniIznos() == null ? 0.0 : o2.getProsecniIznos();
+			         return Double.compare(p2, p1);
+			    }
+			});
+	
+		 System.out.println(rezultat.size());
+		 
+		 for(StatistikaTransakcijaKategorijaDTO dto : rezultat)
+			{
+			 if(dto.getProsecniIznos() != null)
+			 {
+				 System.out.printf("Račun ID: %d | Kategorija: %s | Prosecan iznos: %.2f%n",
+				 dto.getIdRacuna(), dto.getNazivKategorije(), dto.getProsecniIznos());
+				 
+			 }
+				
+			}
+		
+	}
 	
 	public void prikaziUkupanIznosPoTipuTransakcije() throws SQLException{
 		List<StatistikaTransakcijaTipDTO> rezultat = new ArrayList<>();
@@ -54,17 +105,20 @@ public class ComplexFuncionalityService {
 
 			   rezultat.add(new StatistikaTransakcijaTipDTO(racun.getId(), tip, suma, broj));
 			
-			   
-			   Collections.sort(rezultat, new Comparator<StatistikaTransakcijaTipDTO>() {
-				    @Override
-				    public int compare(StatistikaTransakcijaTipDTO o1, StatistikaTransakcijaTipDTO o2) {
-				        return Double.compare(o1.getUkupnaSuma(), o2.getUkupnaSuma()); // sortiranje po sumi opadajuće
-				    }
-				});
-
+			 
 
 			}
 	}
+		  
+		   Collections.sort(rezultat, new Comparator<StatistikaTransakcijaTipDTO>() {
+			    @Override
+			    public int compare(StatistikaTransakcijaTipDTO o1, StatistikaTransakcijaTipDTO o2) {
+			        return Double.compare(o1.getUkupnaSuma(), o2.getUkupnaSuma()); // sortiranje po sumi opadajuće
+			    }
+			});
+		   
+		  
+
 		
 		for(StatistikaTransakcijaTipDTO dto : rezultat)
 		{

@@ -32,8 +32,8 @@ public class MainUIHandler {
 		do {
 			System.out.println("\nOdaberite opciju:");
 			System.out.println("1 - Jednostavan upit - izracunaj sumu iznosa transakcija po kategorijama");
-			System.out.println("2 - Kompleksan upit 1 - Prikaz ukupnog iznosa transakcije po tipu i racunu");
-			System.out.println("3 - Kompleksan upit 2");
+			System.out.println("2 - Kompleksan upit 1 - Prikaz ukupnog iznosa transakcije po tipu za svaki racun");
+			System.out.println("3 - Kompleksan upit 2 - Prikaz prosecnog iznosa transakcije po kategoriji za svaki racun (tamo gde ima iznosa)");
 			System.out.println("4 - Dodavanje nove transakcije");
 			System.out.println("X - Izlazak iz programa");
 
@@ -49,6 +49,7 @@ public class MainUIHandler {
 				break;
 			case "3":
 				//complexQueryUIHandler.handleComplexQueryMenu();
+				prikazDrugogKompleksnogUpita();
 				break;
 			case "4":
 				handleDodavanjeTransakcije();
@@ -58,6 +59,12 @@ public class MainUIHandler {
 		} while (!answer.equalsIgnoreCase("X"));
 
 		sc.close();
+	}
+
+	private void prikazDrugogKompleksnogUpita() throws SQLException {
+		// TODO Auto-generated method stub
+		complexService.prikaziProsecanIznosPoKategoriji();
+		
 	}
 
 	private void prikazPrvogKompleksnogUpita() throws SQLException {
