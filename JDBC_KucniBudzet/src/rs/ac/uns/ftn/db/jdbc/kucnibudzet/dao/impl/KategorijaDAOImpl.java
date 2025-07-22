@@ -47,7 +47,24 @@ public class KategorijaDAOImpl implements KategorijaDAO {
 	@Override
 	public Iterable<Kategorija> findAll() throws SQLException {
 		// TODO Auto-generated method stub
-		return null;
+		String sql = "SELECT * FROM KATEGORIJA";
+	    List<Kategorija> rezultat = new ArrayList<>();
+	    try (Connection conn = ConnectionUtil_HikariCP.getConnection();
+	         PreparedStatement ps = conn.prepareStatement(sql);
+	         ResultSet rs = ps.executeQuery()) {
+	        while (rs.next()) {
+	            Kategorija k = new Kategorija(
+	                rs.getInt("IDKAT"),
+	                rs.getString("NAZKAT"),
+	                rs.getString("TIPKAT"),
+	                rs.getInt("KATEGORIJA_IDKAT"),
+	                rs.getInt("BUDZETSKI_PLAN_IDPL"),
+	                rs.getInt("STEDNJA_IDST")
+	            );
+	            rezultat.add(k);
+	        }
+	    }
+	    return rezultat;
 	}
 
 	@Override
