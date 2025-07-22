@@ -11,6 +11,7 @@ public class Racun {
 	private double stanje;
 	private LocalDateTime datumOtvaranja;
 	private LocalDateTime datumZatvaranja;
+	private String status;
 	private int idTipaRacuna;
 	private int idValute;
 	
@@ -20,15 +21,24 @@ public class Racun {
 	}
 
 	public Racun(int id, String naziv, double stanje, LocalDateTime datumOtvaranja, LocalDateTime datumZatvaranja,
-			int idTipaRacuna, int idValute) {
+			String status, int idTipaRacuna, int idValute) {
 		super();
 		this.id = id;
 		this.naziv = naziv;
 		this.stanje = stanje;
 		this.datumOtvaranja = datumOtvaranja;
 		this.datumZatvaranja = datumZatvaranja;
+		this.status = status;
 		this.idTipaRacuna = idTipaRacuna;
 		this.idValute = idValute;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public int getId() {
