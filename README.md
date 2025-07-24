@@ -6,7 +6,7 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 ---
 
 ## 🛠️ Tehnologije
-- Java (JDK 8+)
+- Java (JDK 7+)
 - JDBC (HikariCP konekcioni pool)
 - Oracle baza podataka
 
