@@ -167,7 +167,7 @@ public class TransakcijaDAOImpl implements TransakcijaDAO {
 	@Override
 	public List<Transakcija> getTransakcijeZaRacun(int idRac) throws SQLException {
 		// TODO Auto-generated method stub
-		 String sql = "SELECT * FROM TRANSAKCIJA WHERE RACUN_IDRAC = ?";
+		 String sql = "SELECT * FROM TRANSAKCIJA WHERE RACUN_IDRAC = ?  AND DATTR >= ADD_MONTHS(SYSDATE, -24)";
 		    List<Transakcija> rezultat = new ArrayList<>();
 		    try (Connection conn = ConnectionUtil_HikariCP.getConnection();
 		         PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -199,7 +199,7 @@ public class TransakcijaDAOImpl implements TransakcijaDAO {
 	public List<Transakcija> getTransakcijeZaRacunIKategoriju(int idRacuna, int idKategorije) throws SQLException {
 		// TODO Auto-generated method stub
 		 List<Transakcija> rezultat = new ArrayList<>();
-		    String query = "SELECT * FROM Transakcija WHERE RACUN_IDRAC = ? AND KATEGORIJA_IDKAT = ?";
+		    String query = "SELECT * FROM Transakcija WHERE RACUN_IDRAC = ? AND KATEGORIJA_IDKAT = ? AND IZNOV > 0";
 
 		    try (Connection con = ConnectionUtil_HikariCP.getConnection();
 		         PreparedStatement ps = con.prepareStatement(query)) {

@@ -98,7 +98,7 @@ public class ComplexFuncionalityService {
 
 			    for (Transakcija t : transakcije) {
 			        if (t.getTip().equals(tip)) {
-			            suma += t.getIznosOsnovnaValuta();
+			            suma += t.getIznosTransakcije();
 			            broj++;
 			        }
 			    }
