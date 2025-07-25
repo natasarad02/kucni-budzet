@@ -58,6 +58,16 @@ VALUES (1002, 'Placanje racuna', 8000, TO_DATE('2024-02-10', 'YYYY-MM-DD'), 8000
 INSERT INTO Transakcija (IDTR, OPISTR, IZNOV, DATTR, IZNTR, TIPTR, Racun_IDRAC, Racun_Tip_racuna_IDTIP, Racun_Valuta_IDVAL, Kategorija_IDKAT)
 VALUES (1003, 'Prebacivanje sredstava', 20000, TO_DATE('2024-03-05', 'YYYY-MM-DD'), 20000, 'Dv_trans', 103, 2, 3, 3);
 
+INSERT INTO Transakcija (IDTR, OPISTR, IZNOV, DATTR, IZNTR, TIPTR, Racun_IDRAC, Racun_Tip_racuna_IDTIP, Racun_Valuta_IDVAL, Kategorija_IDKAT)
+VALUES (1004, 'Prebacivanje sredstava', 5000, TO_DATE('2024-12-05', 'YYYY-MM-DD'), 5000, 'Dv_trans', 101, 1, 1, 3);
+
+INSERT INTO Transakcija (IDTR, OPISTR, IZNOV, DATTR, IZNTR, TIPTR, Racun_IDRAC, Racun_Tip_racuna_IDTIP, Racun_Valuta_IDVAL, Kategorija_IDKAT)
+VALUES (1005, 'Prebacivanje sredstava', 2000, TO_DATE('2024-03-06', 'YYYY-MM-DD'), 2000, 'Pon_trans', 101, 1, 1, 3);
+
+INSERT INTO Transakcija (IDTR, OPISTR, IZNOV, DATTR, IZNTR, TIPTR, Racun_IDRAC, Racun_Tip_racuna_IDTIP, Racun_Valuta_IDVAL, Kategorija_IDKAT)
+VALUES (1006, 'Prebacivanje sredstava', 20000, TO_DATE('2022-03-05', 'YYYY-MM-DD'), 20000, 'Dv_trans', 101, 1, 1, 3);
+
+
 
 -- DVOJNA TRANSAKCIJA
 INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
@@ -67,7 +77,27 @@ INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
 VALUES (1002, 5002, 'kreditna', 'uspesna', 2);
 
 INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
-VALUES (1003, 5003, 'debitna', 'neuspesna', 3);
+VALUES (1003, 5003, 'debitna', 'uspesna', 3);
+
+INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
+VALUES (1004, 5004, 'kreditna', 'uspesna', 3);
+
+INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
+VALUES (1005, 5005, 'debitna', 'uspesna', 3);
+
+INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
+VALUES (1006, 5006, 'kreditna', 'uspesna', 3);
+
+/*
+-- Prvo brisemo zavisne tabele
+DELETE FROM Dv_trans;
+DELETE FROM Transakcija;
+DELETE FROM Provizija;
+DELETE FROM Racun;
+DELETE FROM Kategorija;
+DELETE FROM Tip_racuna;
+DELETE FROM Valuta;
+*/
 
 
 
