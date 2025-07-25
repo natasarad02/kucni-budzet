@@ -36,6 +36,15 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 <img width="215" height="80" alt="image" src="https://github.com/user-attachments/assets/72873bf4-e1f1-436b-bdf5-69c767355ea2" />
 </div>
 
+> 💡 **SQL upit** u jednom pozivu baze:
+
+```sql
+SELECT r.NAZRAC, COUNT(t.IDTR) AS broj_transakcija, SUM(t.IZNOV) AS ukupno
+FROM Racun r
+JOIN Transakcija t ON r.IDRAC = t.Racun_IDRAC
+GROUP BY r.NAZRAC;
+```
+
 
 ### ✅ Kompleksan upit 1  
 **Statistika transakcija po tipu i po računu**
