@@ -36,6 +36,7 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 <img width="215" height="80" alt="image" src="https://github.com/user-attachments/assets/72873bf4-e1f1-436b-bdf5-69c767355ea2" />
 </div>
 
+
 ### ✅ Kompleksan upit 1  
 **Statistika transakcija po tipu i po računu**
 - Za svaki račun izdvajaju se transakcije
@@ -44,8 +45,33 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 - Iznosi su sortirani u rastućem redosledu
 
 <div align="center">
-<img width="598" height="73" alt="image" src="https://github.com/user-attachments/assets/4a5db19f-fa33-43fd-b204-9a55b805167e" />
+<img width="599" height="76" alt="image" src="https://github.com/user-attachments/assets/28a26a49-d73d-486d-a44b-c329f361e22e" />
+
 </div>
+
+> 💡 **Napomena:** U okviru JDBC implementacije, ovaj upit je realizovan kroz **kombinaciju više manjih upita** i obradu u Javi (servis + DAO sloj), kako bi se obezbedila bolja fleksibilnost i čitljivost koda. Ovako bi izgledao **ekvivalentan SQL upit** u jednom pozivu baze:
+
+```sql
+SELECT 
+    r.IDRAC,
+    v.NAZVAL AS valuta,
+    t.TIPTR,
+    SUM(t.IZNTR) AS ukupno_po_tipu,
+    COUNT(*) AS broj_transakcija
+FROM 
+    TRANSAKCIJA t
+    JOIN RACUN r ON t.RACUN_IDRAC = r.IDRAC
+    JOIN VALUTA v ON r.VALUTA_IDVAL = v.IDVAL
+WHERE 
+    t.DATTR >= ADD_MONTHS(SYSDATE, -24)
+
+GROUP BY 
+    r.IDRAC, v.NAZVAL, t.TIPTR
+HAVING 
+    SUM(t.IZNTR) > 0
+ORDER BY 
+    ukupno_po_tipu;
+```
 
 ### ✅ Kompleksan upit 2  
 **Prosečan iznos transakcija po kategoriji i po računu**
