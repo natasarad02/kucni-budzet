@@ -13,7 +13,7 @@ public interface TransakcijaDAO extends CRUDDao<Transakcija, Integer> {
 
 	//metoda koja vraca najposecenije predstave (moze ih biti vise jednako posecenih zbog toga je lista, a ne jedna predstava)
 	public List<TransakcijaKategorijaDTO> izracunajSumuPoKategoriji() throws SQLException;
-	public void insertTransakcija(Transakcija tr) throws SQLException;
+	public int insertTransakcija(Transakcija tr) throws SQLException;
 	public Kategorija getKategorijaZaTransakciju(int idTransakcije) throws SQLException;
 	public List<Transakcija> getTransakcijeZaRacun(int idRac) throws SQLException;
 	public List<Transakcija> getTransakcijeZaRacunIKategoriju(int idRacuna, int idKategorije) throws SQLException;

@@ -10,9 +10,11 @@ import java.util.Scanner;
 
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TransakcijaDAO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.jednostavanupit.TransakcijaKategorijaDTO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.DvojnaTransakcija;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Racun;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Transakcija;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.service.ComplexFuncionalityService;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.service.DvojnaTransakcijaService;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.service.RacunService;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.service.TransakcijaService;
 
@@ -20,6 +22,7 @@ public class MainUIHandler {
 
 	public static Scanner sc = new Scanner(System.in);
 	private static final TransakcijaService transakcijaService = new TransakcijaService();
+	private static final DvojnaTransakcijaService dvTransakcijaService = new DvojnaTransakcijaService();
 	private static final RacunService racunService = new RacunService();
 	private static final ComplexFuncionalityService complexService = new ComplexFuncionalityService();
 	
@@ -111,7 +114,16 @@ public class MainUIHandler {
 
 	            // Radi lakseg testiranja, idRacuna, idValute i idTipaRacuna su zakucane vrednosti
 	            Transakcija novaTransakcija = new Transakcija(0, opis, iznosOv, iznos, datumVreme, tip, 101, 1, 1, idKategorije);
-	            transakcijaService.unesiTransakcijuSaKategorijom(novaTransakcija);
+	            
+	           
+	            int idTr = transakcijaService.unesiTransakcijuSaKategorijom(novaTransakcija);
+	            
+	            if(tip.equals("Dv_trans"))
+	            {
+	            	DvojnaTransakcija dvTrans = new DvojnaTransakcija(idTr, 0, "debitna", "uspesna", 3); 
+	            	dvTransakcijaService.insertDvojnaTransakcija(dvTrans);
+	            	
+	            }
 
 	          
 

@@ -3,6 +3,7 @@ package rs.ac.uns.ftn.db.jdbc.kucnibudzet.service;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
 
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.connection.ConnectionUtil_HikariCP;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.KategorijaDAO;
@@ -31,7 +32,7 @@ public class TransakcijaService {
 		
 	}
 	
-	public void unesiTransakcijuSaKategorijom(Transakcija tr)
+	public int unesiTransakcijuSaKategorijom(Transakcija tr)
 	{
 		Connection conn = null;
 		try {
@@ -43,7 +44,14 @@ public class TransakcijaService {
 			// System.out.println("uslo");
 			 if(kat == null)
 			 {
-				 Kategorija novaKategorija = new Kategorija(-1, "dodati_naziv", "dodati_tip", -1, -1, -1);
+				 Scanner sc = new Scanner(System.in);
+				 System.out.print("Unesite naziv kategorije: ");
+		          String kategorija = sc.nextLine();
+		            
+		          System.out.print("Unesite tip kategorije (prihod/rashod): ");
+		          String tip = sc.nextLine();
+				 
+		          Kategorija novaKategorija = new Kategorija(-1, kategorija, tip, -1, -1, -1);
 				 int katId = kategorijaDAO.insertKategorija(novaKategorija);
 				 tr.setIdKategorije(katId);
 				// System.out.println(katId);
@@ -55,22 +63,25 @@ public class TransakcijaService {
 				// System.out.println("uslo2");
 			 }
 			 
-			 transakcijaDAO.insertTransakcija(tr);
+			 int idTr = transakcijaDAO.insertTransakcija(tr);
 			 
 			 conn.commit();
 			 System.out.println("Uspesno dodata transakcija");
+			 return idTr;
 		
 		} catch (SQLException e) {
 		        if (conn != null) {
 		            try {
 		                conn.rollback();
+		                
 		            } catch (SQLException ex) {
 		                ex.printStackTrace();
 		            }
 		        }
 		        e.printStackTrace();
 		    } finally {
-		        if (conn != null) try { conn.setAutoCommit(true); conn.close(); } catch (SQLException e) { }
+		        if (conn != null) try { conn.setAutoCommit(true); conn.close();  } catch (SQLException e) { }
 		    }
+		return 0;
 	}
 }

@@ -129,8 +129,8 @@ public class KategorijaDAOImpl implements KategorijaDAO {
 		        try(PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);)
 		        {
 		        	preparedStatement.setInt(1, nextId);
-		        	preparedStatement.setString(2, "dodati_naziv");
-		        	preparedStatement.setString(3, "prihod");
+		        	preparedStatement.setString(2, kat.getNaziv());
+		        	preparedStatement.setString(3, kat.getTipKat());
 		        	preparedStatement.setInt(4, 1);
 		        	preparedStatement.setNull(5, java.sql.Types.INTEGER);
 		        	preparedStatement.setNull(6, java.sql.Types.INTEGER);

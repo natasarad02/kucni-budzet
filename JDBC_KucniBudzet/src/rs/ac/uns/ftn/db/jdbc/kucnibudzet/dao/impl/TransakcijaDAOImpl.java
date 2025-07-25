@@ -105,7 +105,7 @@ public class TransakcijaDAOImpl implements TransakcijaDAO {
 	}
 
 	@Override
-	public void insertTransakcija(Transakcija tr) throws SQLException {
+	public int insertTransakcija(Transakcija tr) throws SQLException {
 	    String getMaxIdSql = "SELECT COALESCE(MAX(IDTR), 0) + 1 FROM Transakcija";
 	    String insertSql = "INSERT INTO Transakcija (IDTR, OPISTR, IZNOV, DATTR, IZNTR, TIPTR, Kategorija_IDKAT, Racun_IDRAC, Racun_Tip_racuna_IDTIP, Racun_Valuta_IDVAL) " +
 	                       "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -132,6 +132,7 @@ public class TransakcijaDAOImpl implements TransakcijaDAO {
 	            ps.setInt(10, tr.getIdValute());
 
 	            ps.executeUpdate();
+	            return nextId;
 	        }
 	    }
 	}

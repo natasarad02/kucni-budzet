@@ -8,16 +8,25 @@ public class DvojnaTransakcija {
 	private int id;
 	private String vrsta;
 	private String status;
+	public int idProvizije;
+	
 	public DvojnaTransakcija() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public DvojnaTransakcija(int idTransakcije, int id, String vrsta, String status) {
+	public DvojnaTransakcija(int idTransakcije, int id, String vrsta, String status, int idProvizije) {
 		super();
 		this.idTransakcije = idTransakcije;
 		this.id = id;
 		this.vrsta = vrsta;
 		this.status = status;
+		this.idProvizije = idProvizije;
+	}
+	public int getIdProvizije() {
+		return idProvizije;
+	}
+	public void setIdProvizije(int idProvizije) {
+		this.idProvizije = idProvizije;
 	}
 	public int getIdTransakcije() {
 		return idTransakcije;
