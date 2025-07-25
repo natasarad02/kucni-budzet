@@ -33,14 +33,14 @@ ORDER BY
 SELECT
     r.IDRAC,
     k.NAZKAT,
-    AVG(t.IZNTR) AS prosecni_iznos
+    AVG(t.IZNOV) AS prosecni_iznos
 FROM
     RACUN r
 CROSS JOIN
     Kategorija k
 LEFT JOIN
     Transakcija t ON t.RACUN_IDRAC = r.IDRAC AND t.KATEGORIJA_IDKAT = k.IDKAT
-WHERE t.IZNTR > 0
+WHERE t.IZNOV > 0
 GROUP BY
     r.IDRAC,
     k.IDKAT,
