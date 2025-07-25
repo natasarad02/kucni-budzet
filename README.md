@@ -6,7 +6,7 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 ---
 
 ## 🛠️ Tehnologije
-- Java (JDK 8+)
+- Java (JDK 7+)
 - JDBC (HikariCP konekcioni pool)
 - Oracle baza podataka
 
@@ -33,8 +33,19 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 - Ispis sume iznosa transakcija po kategorijama
 
 <div align="center">
-<img width="215" height="80" alt="image" src="https://github.com/user-attachments/assets/72873bf4-e1f1-436b-bdf5-69c767355ea2" />
+<img width="213" height="83" alt="image" src="https://github.com/user-attachments/assets/9ba29abe-c177-40ea-8cf4-2d57fed32f9f" />
+
 </div>
+
+> 💡 **SQL upit** u jednom pozivu baze:
+
+```sql
+SELECT r.NAZRAC, COUNT(t.IDTR) AS broj_transakcija, SUM(t.IZNOV) AS ukupno
+FROM Racun r
+JOIN Transakcija t ON r.IDRAC = t.Racun_IDRAC
+GROUP BY r.NAZRAC;
+```
+
 
 ### ✅ Kompleksan upit 1  
 **Statistika transakcija po tipu i po računu**
@@ -44,8 +55,34 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 - Iznosi su sortirani u rastućem redosledu
 
 <div align="center">
-<img width="598" height="73" alt="image" src="https://github.com/user-attachments/assets/4a5db19f-fa33-43fd-b204-9a55b805167e" />
+<img width="623" height="109" alt="image" src="https://github.com/user-attachments/assets/361e5d1a-89e4-4a73-a2c0-345c933958d5" />
+
+
 </div>
+
+> 💡 **Napomena:** U okviru JDBC implementacije, ovaj upit je realizovan kroz **kombinaciju više manjih upita** i obradu u Javi (servis + DAO sloj), kako bi se obezbedila bolja fleksibilnost i čitljivost koda. Ovako bi izgledao **ekvivalentan SQL upit** u jednom pozivu baze:
+
+```sql
+SELECT 
+    r.IDRAC,
+    v.NAZVAL AS valuta,
+    t.TIPTR,
+    SUM(t.IZNTR) AS ukupno_po_tipu,
+    COUNT(*) AS broj_transakcija
+FROM 
+    TRANSAKCIJA t
+    JOIN RACUN r ON t.RACUN_IDRAC = r.IDRAC
+    JOIN VALUTA v ON r.VALUTA_IDVAL = v.IDVAL
+WHERE 
+    t.DATTR >= ADD_MONTHS(SYSDATE, -24)
+
+GROUP BY 
+    r.IDRAC, v.NAZVAL, t.TIPTR
+HAVING 
+    SUM(t.IZNTR) > 0
+ORDER BY 
+    ukupno_po_tipu;
+```
 
 ### ✅ Kompleksan upit 2  
 **Prosečan iznos transakcija po kategoriji i po računu**
@@ -55,8 +92,29 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 - Iznosi su sortirani u opadajućem redosledu
   
 <div align="center">
-<img width="655" height="108" alt="image" src="https://github.com/user-attachments/assets/f94204f6-a80d-47db-b040-b61134cc4652" />
+<img width="641" height="108" alt="image" src="https://github.com/user-attachments/assets/c66d16e4-02dc-4847-886c-5e81ebba02cb" />
+
 </div>
+
+```sql
+SELECT
+    r.IDRAC,
+    k.NAZKAT,
+    AVG(t.IZNTR) AS prosecni_iznos
+FROM
+    RACUN r
+CROSS JOIN
+    Kategorija k
+LEFT JOIN
+    Transakcija t ON t.RACUN_IDRAC = r.IDRAC AND t.KATEGORIJA_IDKAT = k.IDKAT
+WHERE t.IZNTR > 0
+GROUP BY
+    r.IDRAC,
+    k.IDKAT,
+    k.NAZKAT
+ORDER BY
+  prosecni_iznos DESC;
+```
 
 
 ### 🔁 Transakcija
