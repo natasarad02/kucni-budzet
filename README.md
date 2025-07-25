@@ -33,7 +33,8 @@ Ovaj projekat predstavlja jednostavan informacioni sistem za vođenje kućnog bu
 - Ispis sume iznosa transakcija po kategorijama
 
 <div align="center">
-<img width="215" height="80" alt="image" src="https://github.com/user-attachments/assets/72873bf4-e1f1-436b-bdf5-69c767355ea2" />
+<img width="213" height="83" alt="image" src="https://github.com/user-attachments/assets/9ba29abe-c177-40ea-8cf4-2d57fed32f9f" />
+
 </div>
 
 > 💡 **SQL upit** u jednom pozivu baze:
@@ -54,7 +55,8 @@ GROUP BY r.NAZRAC;
 - Iznosi su sortirani u rastućem redosledu
 
 <div align="center">
-<img width="599" height="76" alt="image" src="https://github.com/user-attachments/assets/28a26a49-d73d-486d-a44b-c329f361e22e" />
+<img width="623" height="109" alt="image" src="https://github.com/user-attachments/assets/361e5d1a-89e4-4a73-a2c0-345c933958d5" />
+
 
 </div>
 
