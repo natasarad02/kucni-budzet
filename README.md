@@ -92,8 +92,29 @@ ORDER BY
 - Iznosi su sortirani u opadajućem redosledu
   
 <div align="center">
-<img width="655" height="108" alt="image" src="https://github.com/user-attachments/assets/f94204f6-a80d-47db-b040-b61134cc4652" />
+<img width="641" height="108" alt="image" src="https://github.com/user-attachments/assets/c66d16e4-02dc-4847-886c-5e81ebba02cb" />
+
 </div>
+
+```sql
+SELECT
+    r.IDRAC,
+    k.NAZKAT,
+    AVG(t.IZNTR) AS prosecni_iznos
+FROM
+    RACUN r
+CROSS JOIN
+    Kategorija k
+LEFT JOIN
+    Transakcija t ON t.RACUN_IDRAC = r.IDRAC AND t.KATEGORIJA_IDKAT = k.IDKAT
+WHERE t.IZNTR > 0
+GROUP BY
+    r.IDRAC,
+    k.IDKAT,
+    k.NAZKAT
+ORDER BY
+  prosecni_iznos DESC;
+```
 
 
 ### 🔁 Transakcija
