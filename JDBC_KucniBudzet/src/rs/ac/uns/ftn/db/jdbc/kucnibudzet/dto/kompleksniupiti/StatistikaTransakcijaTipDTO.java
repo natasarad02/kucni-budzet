@@ -1,4 +1,4 @@
-package rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksanupit1;
+package rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksniupiti;
 
 public class StatistikaTransakcijaTipDTO {
 	  private int idRacuna;

@@ -13,8 +13,8 @@ import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.TransakcijaDAO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.impl.KategorijaDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.impl.RacunDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dao.impl.TransakcijaDAOImpl;
-import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksanupit1.StatistikaTransakcijaKategorijaDTO;
-import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksanupit1.StatistikaTransakcijaTipDTO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksniupiti.StatistikaTransakcijaKategorijaDTO;
+import rs.ac.uns.ftn.db.jdbc.kucnibudzet.dto.kompleksniupiti.StatistikaTransakcijaTipDTO;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Kategorija;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Racun;
 import rs.ac.uns.ftn.db.jdbc.kucnibudzet.model.Transakcija;
@@ -61,7 +61,7 @@ public class ComplexFuncionalityService {
 			    }
 			});
 	
-		 System.out.println(rezultat.size());
+		 
 		 
 		 for(StatistikaTransakcijaKategorijaDTO dto : rezultat)
 			{
