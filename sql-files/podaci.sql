@@ -83,10 +83,7 @@ INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
 VALUES (1004, 5004, 'kreditna', 'uspesna', 3);
 
 INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
-VALUES (1005, 5005, 'debitna', 'uspesna', 3);
-
-INSERT INTO Dv_trans (IDTR, IDDV, VRSTADV, STATUSDV, Provizija_IDPR)
-VALUES (1006, 5006, 'kreditna', 'uspesna', 3);
+VALUES (1006, 5005, 'kreditna', 'uspesna', 3);
 
 /*
 -- Prvo brisemo zavisne tabele
